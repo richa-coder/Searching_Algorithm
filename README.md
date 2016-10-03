@@ -4,7 +4,7 @@ bool jw_search ( node*& list, int key, int*& rec ) // linear search on linked li
 {
   
   bool find = false;
-  node *i;
+  node *j;
 
   for ( j = list; j != 0; j = j->next ) {
     if ( key == j->key )
@@ -22,3 +22,4 @@ bool jw_search ( node*& list, int key, int*& rec ) // linear search on linked li
  A list with 5 items would be allocated a size of 6 for use by the algorithm.
  There will be a speed improvement which  takes advantage of the fact that 80% of all operations are performed on 20% of the items in a data set.
  If those items are nearer to the front of the list then search will be sped up considerably. 
+with a linked list the splicing operation required to restructure the list and send the item to the front is quick and trivial.On a linked data structure, moving an item to a new position over large distances has a constant time complexity, O(1), whereas for contiguous memory such as an array, the time complexity is O(N) where N is the range of items being shifted.
