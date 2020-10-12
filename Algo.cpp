@@ -1,10 +1,10 @@
 struct node {   /*node Structure*/
-  int rec;
+  int re;
   int key;
   node *next;
 
   node ( int r, int k, node *n )
-    : rec ( r )
+    : re ( r )
     , key ( k )
     , next ( n )
   {}
@@ -18,7 +18,7 @@ bool jw_search ( node*& list, int key, int*& rec ) /* Efficient Searching*/
 
   // Is it already at the front?
   if ( key == iter->key ) {
-    rec = &iter->rec;
+    re = &iter->re;
     found = true;
   }
   else {
@@ -34,7 +34,7 @@ bool jw_search ( node*& list, int key, int*& rec ) /* Efficient Searching*/
       // Place the node at the front
       save->next = list;
       list = save;
-      rec = &list->rec;
+      re = &list->rec;
       found = true;
     }
   }
